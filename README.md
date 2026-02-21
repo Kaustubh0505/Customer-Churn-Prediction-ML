@@ -18,22 +18,7 @@ Deploy the solution as a simple, interactive web application
 
 🗂️ Project Structure
 
-customer-churn-prediction-ml/
-│
-├── data/
-│   └── telco_churn.csv
-│
-├── src/
-│   ├── preprocessing.py
-│   ├── train.py
-│   ├── evaluate.py
-│   └── utils.py
-│
-├── app.py
-├── requirements.txt
-├── README.md
-└── report/
-    └── midsem_report.tex
+
 
 📊 Dataset
 
