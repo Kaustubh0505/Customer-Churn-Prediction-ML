@@ -4,7 +4,6 @@
 
 This project focuses on predicting customer churn by analyzing historical customer data using classical supervised machine learning techniques. The objective is to identify customers who are likely to leave a service and provide insights that can support data-driven decision making.
 
-The project is developed strictly for mid-semester evaluation and uses traditional machine learning methods only, without any GenAI or agent-based approaches.
 
 🎯 Objectives
 
