@@ -110,4 +110,4 @@ The application is designed to be intuitive, stable, and suitable for live demon
 
 * Rudraksh Rathod - 2401010396
 * Kaustubh Hiwanj - 2401010217
-* Bhargav Patil - 
+* Bhargav Patil - 2401020092
