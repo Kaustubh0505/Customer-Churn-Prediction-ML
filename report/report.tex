@@ -17,38 +17,13 @@ Customer Churn Prediction using Random Forest Classifier}
 
 \maketitle
 
-\section*{Project Details}
-\begin{itemize}
-    \item \textbf{Project:} Customer Churn Prediction using Random Forest Classifier
-    \item \textbf{Dataset:} Telco Customer Churn Dataset (Kaggle)
-\end{itemize}
+\section{Problem Statement}
 
-\section{Executive Summary}
+Customer churn is a significant challenge in the telecommunications industry, as retaining existing customers is considerably more cost-effective than acquiring new ones. The objective of this project is to develop a machine learning model capable of predicting whether a customer is likely to discontinue telecom services based on historical customer data. Accurate churn prediction enables businesses to take proactive measures to improve customer retention and reduce revenue loss.
 
-This report explains the performance of a machine learning model developed to predict customer churn. Customer churn refers to customers discontinuing a telecom service. Predicting churn is critical because retaining existing customers is significantly more cost-effective than acquiring new ones.
+\section{Data Description}
 
-The model uses customer information such as service usage, payment methods, and contract type to predict whether a customer will \textbf{churn (1)} or \textbf{not churn (0)}.
-
-\subsection*{Key Results}
-\begin{itemize}
-    \item \textbf{Testing Accuracy:} 80.7\%
-    \item \textbf{Weighted F1-Score:} 0.80
-    \item \textbf{Precision for Churn Customers:} 0.68
-    \item \textbf{Recall for Churn Customers:} 0.52
-\end{itemize}
-
-Overall, the model performs well and provides reliable predictions despite the class imbalance in the dataset.
-
-\section{Model Details}
-
-\begin{itemize}
-    \item \textbf{Algorithm Used:} Random Forest Classifier
-    \item \textbf{Learning Type:} Supervised Learning (Binary Classification)
-    \item \textbf{Library Used:} Scikit-Learn
-    \item \textbf{Target Variable:} \texttt{Churn}
-\end{itemize}
-
-\section{Dataset Overview}
+The project uses the Telco Customer Churn Dataset obtained from Kaggle. The dataset contains demographic details, service usage information, and payment-related attributes for telecom customers.
 
 \begin{itemize}
     \item \textbf{Total Customers:} 7,043
@@ -57,22 +32,42 @@ Overall, the model performs well and provides reliable predictions despite the c
 
 \subsection*{Class Distribution}
 \begin{itemize}
-    \item Customers who did not churn: $\sim$73\%
-    \item Customers who churned: $\sim$27\%
+    \item Customers who did not churn: approximately 73\%
+    \item Customers who churned: approximately 27\%
 \end{itemize}
 
-\subsection*{Data Preprocessing Steps}
+\subsection*{Data Preprocessing}
 \begin{itemize}
-    \item Removed the \texttt{customerID} column
-    \item Converted categorical features to numerical values using label encoding
-    \item Split the dataset into 80\% training and 20\% testing sets
+    \item The \texttt{customerID} column was removed as it does not contribute to prediction.
+    \item Categorical variables were converted into numerical form using label encoding.
+    \item The dataset was split into 80\% training data and 20\% testing data.
 \end{itemize}
 
-\section{Model Architecture}
+\section{Exploratory Data Analysis (EDA)}
 
-The Random Forest algorithm was selected because it combines multiple decision trees, reducing overfitting and improving generalization performance.
+Exploratory Data Analysis was conducted to understand the patterns and relationships within the dataset. The following insights were observed:
 
-\subsection*{Hyperparameters Used}
+\begin{itemize}
+    \item The dataset is imbalanced, with a higher proportion of non-churn customers.
+    \item Customers on month-to-month contracts showed higher churn rates compared to long-term contracts.
+    \item Customers with shorter tenure were more likely to churn.
+\end{itemize}
+
+These insights informed feature understanding and supported the selection of the Random Forest algorithm.
+
+\section{Methodology}
+
+A Random Forest Classifier was chosen for this project due to its ability to handle non-linear relationships and reduce overfitting by combining multiple decision trees.
+
+\begin{itemize}
+    \item \textbf{Algorithm Used:} Random Forest Classifier
+    \item \textbf{Learning Type:} Supervised Learning (Binary Classification)
+    \item \textbf{Library Used:} Scikit-Learn
+    \item \textbf{Target Variable:} \texttt{Churn}
+\end{itemize}
+
+\subsection*{Model Hyperparameters}
+
 \begin{itemize}
     \item \texttt{n\_estimators = 200}
     \item \texttt{max\_depth = 11}
@@ -80,9 +75,9 @@ The Random Forest algorithm was selected because it combines multiple decision t
     \item \texttt{min\_samples\_leaf = 2}
 \end{itemize}
 
-\section{Model Performance}
+\section{Evaluation}
 
-The model was evaluated using standard classification metrics such as accuracy, precision, recall, and F1-score.
+The model was evaluated using classification metrics including accuracy, precision, recall, and F1-score.
 
 \subsection*{Classification Report}
 
@@ -98,24 +93,32 @@ Churn (1) & 0.68 & 0.52 & 0.59 & 373 \\
 \end{tabular}
 \end{table}
 
-\subsection*{Overall Results}
+\subsection*{Overall Performance Metrics}
+
 \begin{itemize}
     \item \textbf{Accuracy:} 81\%
     \item \textbf{Macro Average F1-Score:} 0.73
     \item \textbf{Weighted Average F1-Score:} 0.80
 \end{itemize}
 
-\section{Business Importance}
+\section{Optimization}
+
+Model performance was improved through hyperparameter tuning of the Random Forest classifier. Adjustments to the number of trees, tree depth, and minimum samples per node helped balance bias and variance, resulting in improved generalization on unseen data.
+
+\section{Team Contribution}
+
+This project was completed as a group effort by \textbf{Kaustubh Hiwanj}, \textbf{Rudraksh Rathod}, and \textbf{Bhargav Patil}. The responsibilities were distributed as follows:
 
 \begin{itemize}
-    \item Identifies customers likely to churn
-    \item Enables proactive retention strategies
-    \item Reduces revenue loss
-    \item Supports data-driven business decisions
+    \item \textbf{Kaustubh Hiwanj:} Model training, evaluation, and preparation of the project presentation (PPT).
+    \item \textbf{Rudraksh Rathod:} Development of the project website and creation of the README file.
+    \item \textbf{Bhargav Patil:} Documentation and preparation of the project report.
 \end{itemize}
+
+All team members actively collaborated throughout the project, properly committed their respective work to the GitHub repository, and contributed collectively to planning, coordination, and successful project completion.
 
 \section{Conclusion}
 
-The Random Forest model achieves over \textbf{80\% accuracy} and demonstrates strong predictive performance. It successfully meets the objectives of Capstone Milestone 1 and provides a solid foundation for future improvements in customer retention systems.
+The Random Forest model achieved over \textbf{80\% accuracy}, demonstrating strong predictive capability for customer churn. The model satisfies the objectives of Capstone Milestone 1 and establishes a solid foundation for future enhancements such as advanced feature engineering and alternative classification algorithms.
 
 \end{document}
