@@ -74,7 +74,7 @@ The model was evaluated using classification metrics such as accuracy, precision
 
 ### Overall Results
 
-- **Accuracy:** 81%  
+- **Accuracy:** 89%  
 - **Macro Average F1-Score:** 0.73  
 - **Weighted Average F1-Score:** 0.80  
 
@@ -91,4 +91,4 @@ The model was evaluated using classification metrics such as accuracy, precision
 
 ## 7. Conclusion
 
-The Random Forest model gives strong and reliable results with over **80% accuracy**. It meets the goals of Capstone Milestone 1 and provides a solid base for future improvements in customer retention systems.
+The Random Forest model gives strong and reliable results with over **89% accuracy**. It meets the goals of Capstone Milestone 1 and provides a solid base for future improvements in customer retention systems.
