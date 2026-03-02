@@ -43,7 +43,6 @@ Overall, the model performs well and gives reliable results, even though the dat
 ### Data Preprocessing Steps
 
 - Removed the `customerID` column  
-- Filled missing values in `TotalCharges` using the mean  
 - Converted categorical data into numerical form using label encoding  
 - Split the data into **80% training** and **20% testing**
 
