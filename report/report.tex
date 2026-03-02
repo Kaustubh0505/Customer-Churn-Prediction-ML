@@ -1,0 +1,121 @@
+\documentclass[12pt]{article}
+
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\onehalfspacing
+
+\title{\textbf{Model Evaluation Report}\\
+Customer Churn Prediction using Random Forest Classifier}
+\author{Capstone Project -- Milestone 1}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Project Details}
+\begin{itemize}
+    \item \textbf{Project:} Customer Churn Prediction using Random Forest Classifier
+    \item \textbf{Dataset:} Telco Customer Churn Dataset (Kaggle)
+\end{itemize}
+
+\section{Executive Summary}
+
+This report explains the performance of a machine learning model developed to predict customer churn. Customer churn refers to customers discontinuing a telecom service. Predicting churn is critical because retaining existing customers is significantly more cost-effective than acquiring new ones.
+
+The model uses customer information such as service usage, payment methods, and contract type to predict whether a customer will \textbf{churn (1)} or \textbf{not churn (0)}.
+
+\subsection*{Key Results}
+\begin{itemize}
+    \item \textbf{Testing Accuracy:} 80.7\%
+    \item \textbf{Weighted F1-Score:} 0.80
+    \item \textbf{Precision for Churn Customers:} 0.68
+    \item \textbf{Recall for Churn Customers:} 0.52
+\end{itemize}
+
+Overall, the model performs well and provides reliable predictions despite the class imbalance in the dataset.
+
+\section{Model Details}
+
+\begin{itemize}
+    \item \textbf{Algorithm Used:} Random Forest Classifier
+    \item \textbf{Learning Type:} Supervised Learning (Binary Classification)
+    \item \textbf{Library Used:} Scikit-Learn
+    \item \textbf{Target Variable:} \texttt{Churn}
+\end{itemize}
+
+\section{Dataset Overview}
+
+\begin{itemize}
+    \item \textbf{Total Customers:} 7,043
+    \item \textbf{Total Features:} 21
+\end{itemize}
+
+\subsection*{Class Distribution}
+\begin{itemize}
+    \item Customers who did not churn: $\sim$73\%
+    \item Customers who churned: $\sim$27\%
+\end{itemize}
+
+\subsection*{Data Preprocessing Steps}
+\begin{itemize}
+    \item Removed the \texttt{customerID} column
+    \item Converted categorical features to numerical values using label encoding
+    \item Split the dataset into 80\% training and 20\% testing sets
+\end{itemize}
+
+\section{Model Architecture}
+
+The Random Forest algorithm was selected because it combines multiple decision trees, reducing overfitting and improving generalization performance.
+
+\subsection*{Hyperparameters Used}
+\begin{itemize}
+    \item \texttt{n\_estimators = 200}
+    \item \texttt{max\_depth = 11}
+    \item \texttt{min\_samples\_split = 5}
+    \item \texttt{min\_samples\_leaf = 2}
+\end{itemize}
+
+\section{Model Performance}
+
+The model was evaluated using standard classification metrics such as accuracy, precision, recall, and F1-score.
+
+\subsection*{Classification Report}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Class} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
+\midrule
+No Churn (0) & 0.84 & 0.91 & 0.88 & 1036 \\
+Churn (1) & 0.68 & 0.52 & 0.59 & 373 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection*{Overall Results}
+\begin{itemize}
+    \item \textbf{Accuracy:} 81\%
+    \item \textbf{Macro Average F1-Score:} 0.73
+    \item \textbf{Weighted Average F1-Score:} 0.80
+\end{itemize}
+
+\section{Business Importance}
+
+\begin{itemize}
+    \item Identifies customers likely to churn
+    \item Enables proactive retention strategies
+    \item Reduces revenue loss
+    \item Supports data-driven business decisions
+\end{itemize}
+
+\section{Conclusion}
+
+The Random Forest model achieves over \textbf{80\% accuracy} and demonstrates strong predictive performance. It successfully meets the objectives of Capstone Milestone 1 and provides a solid foundation for future improvements in customer retention systems.
+
+\end{document}
